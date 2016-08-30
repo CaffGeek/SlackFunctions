@@ -5,8 +5,10 @@ module.exports = function(context, req) {
         var now = new Date();
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: { text: "hello",  response_type: "in_channel" }
-            //"Hello " + (req.query.text || req.body.text) + ", it's " + now
+            body: { 
+                response_type: "in_channel",
+                text:  "Hello " + (req.query.text || req.body.text) + ", it's " + now
+            }
         };
     }
     else {
