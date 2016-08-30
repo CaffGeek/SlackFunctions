@@ -1,3 +1,10 @@
 {
-  disabled: false
+    "disabled":false,
+    "bindings":[
+        {
+            "type": "bindingType",
+            "direction": "in",
+            "name": "name"
+        }
+    ]
 }
