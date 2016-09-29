@@ -1,4 +1,5 @@
-#! /usr/bin/env python
-
-print("Content-Type: text/plain\n")
-print("hello")
+#!/usr/bin/python
+ 
+print "Content-type: text/html"
+print
+print "Hello, World!"
