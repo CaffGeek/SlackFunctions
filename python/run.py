@@ -1,5 +1,4 @@
-#!/usr/bin/python
- 
-print "Content-type: text/html"
-print
-print "Hello, World!"
+import os
+
+output = open(os.environ['res'], 'w')
+output.write("asdhfkjhaskdfh")
