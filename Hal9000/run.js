@@ -1,21 +1,25 @@
 module.exports = function(context, req) {
     context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
     
-    if (req.query.text || (req.body && req.body.text)) {
-        var now = new Date();
-        context.res = {
-            // status: 200, /* Defaults to 200 */
-            body: { 
-                response_type: "in_channel",
-                text:  "Hello " + (req.query.text || req.body.text) + ", it's " + now
-            }
-        };
-    }
-    else {
-        context.res = {
-            status: 400,
-            body: "I'm sorry, I can't let you do that."
-        };
-    }
+	var input = req.query.text || (req.body && req.body.text);
+	var command = input.split(' ')[0];
+		
+	switch (command) {
+		case 'time': 
+			context.res = {
+				body: { 
+					response_type: "in_channel",
+					text:  "Hello, it's " + (new Date())
+				}
+			};
+			break;
+		default:			
+			context.res = {
+				status: 400,
+				body:  "I'm sorry, I can't let you do that."
+			};
+			break;
+	}
+	
     context.done();
 };
