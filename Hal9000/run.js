@@ -1,0 +1,21 @@
+module.exports = function(context, req) {
+    context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
+    
+    if (req.query.text || (req.body && req.body.text)) {
+        var now = new Date();
+        context.res = {
+            // status: 200, /* Defaults to 200 */
+            body: { 
+                response_type: "in_channel",
+                text:  "Hello " + (req.query.text || req.body.text) + ", it's " + now
+            }
+        };
+    }
+    else {
+        context.res = {
+            status: 400,
+            body: "I'm sorry, I can't let you do that."
+        };
+    }
+    context.done();
+};
