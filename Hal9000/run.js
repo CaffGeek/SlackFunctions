@@ -1,8 +1,8 @@
 module.exports = function(context, req) {
     context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
     
-	var input = req.query.text || (req.body && req.body.text);
-	var command = input.split(' ')[0];
+	var input = req.query.text;
+	var command = input ? input.split(' ')[0] : '';
 		
 	switch (command) {
 		case 'time': 
