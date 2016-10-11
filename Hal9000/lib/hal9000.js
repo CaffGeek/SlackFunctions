@@ -36,13 +36,3 @@ Hal9000.prototype._loadBotUser = function () {
 };
 
 module.exports = Hal9000;
-
-var token = process.env.BOT_API_KEY;
-var name = process.env.BOT_NAME;
-
-var norrisbot = new Hal9000({
-    token: token,
-    name: name
-});
-
-norrisbot.run();
