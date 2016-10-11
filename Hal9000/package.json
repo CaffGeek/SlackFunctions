@@ -2,9 +2,18 @@
   "name": "hal9000",
   "version": "1.0.0",
   "description": "Hal9000",
-  "main": "run.js",
-  "author": "CaffGeek",
+  "author": "CaffGeek", 
+  "main": "lib/hal9000.js",
+  "bin": {
+    "hal9000.js": "run.js"
+  },
+  "scripts": {
+    "start": "node run.js"
+  },
   "dependencies": {
+    "async": "^1.4.1",
+    "progress": "^1.1.8",
+    "request": "^2.60.0",
     "slackbots": "^0.5.1"
   }
 }
