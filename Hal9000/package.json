@@ -5,7 +5,7 @@
   "author": "CaffGeek", 
   "main": "lib/hal9000.js",
   "bin": {
-    "hal9000.js": "run.js"
+    "hal9000": "run.js"
   },
   "scripts": {
     "start": "node run.js"
