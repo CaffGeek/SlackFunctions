@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 var Hal9000 = require('./lib/hal9000');
