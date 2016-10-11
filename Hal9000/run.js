@@ -1,8 +1,12 @@
 module.exports = function(context, req) {
     context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
-    context.log('query.text=%s', req.query.text);
-    context.log('query.body=%s', req.body);
-    context.log('query.body.challenge=%s', req.body.challenge);
+    
+	if (req.body && req.body.challenge){
+		context.res = {
+			challenge: req.body.challenge
+		};
+    	context.done();
+	}
     
 	var input = req.query.text;
 	var command = input ? input.split(' ')[0] : '';
