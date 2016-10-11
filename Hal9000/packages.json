@@ -1,0 +1,9 @@
+{
+  "name": "hal9000",
+  "version": "1.0.0",
+  "description": "Hal9000",
+  "main": "run.js",
+  "author": "CaffGeek",
+  "dependencies": {
+    "slackbots": "^0.5.1"
+  }
