@@ -2,7 +2,7 @@ module.exports = function(context, req) {
     context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
     context.log('query.text=%s', req.query.text);
     context.log('query.body=%s', req.body);
-    context.log('query.body.text=%s', req.body.text);
+    context.log('query.body.code=%s', req.body.code);
     
 	var input = req.query.text;
 	var command = input ? input.split(' ')[0] : '';
