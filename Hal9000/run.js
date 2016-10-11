@@ -1,6 +1,6 @@
 'use strict';
 
-var NorrisBot = require('./lib/hal9000');
+var Hal9000 = require('./lib/hal9000');
 
 var token = process.env.BOT_API_KEY;
 var name = process.env.BOT_NAME;
