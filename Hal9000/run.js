@@ -7,6 +7,9 @@ module.exports = function(context, req) {
      	context.done();
  	}
     
+    if (req.body && req.body.code)
+        context.log('Code=%s', req.body.code);
+    
     var Hal9000 = require('./lib/hal9000');
 
     var token = process.env.BOT_API_KEY;
@@ -15,7 +18,6 @@ module.exports = function(context, req) {
     context.log('Token=%s', token);
     context.log('Name=%s', name);
 
-    context.log('Hal9000 coming online....');
 
     var hal9000 = new Hal9000({
         token: token,
