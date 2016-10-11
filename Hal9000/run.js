@@ -39,7 +39,7 @@ module.exports = Hal9000;
 
 var token = process.env.BOT_API_KEY;
 
-var norrisbot = new NorrisBot({
+var norrisbot = new Hal9000({
     token: token,
     name: name
 });
