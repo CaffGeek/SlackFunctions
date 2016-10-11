@@ -10,6 +10,9 @@ module.exports = function(context, req) {
     if (req.body && req.body.code)
         context.log('Code=%s', req.body.code);
     
+    if (req.body && req.body.code2)
+        context.log('Code2=%s', req.body.code2);
+    
     var Hal9000 = require('./lib/hal9000');
 
     var token = process.env.BOT_API_KEY;
