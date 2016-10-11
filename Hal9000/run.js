@@ -1,6 +1,12 @@
 module.exports = function(context, req) {
     context.log('Hal9000 coming online...');
 
+    if (req.body && req.body.challenge) {
+        context.log('query.body.challenge=%s', req.body.challenge);
+        context.res = { challenge: req.body.challenge };
+     	context.done();
+ 	}
+    
     var Hal9000 = require('./lib/hal9000');
 
     var token = process.env.BOT_API_KEY;
