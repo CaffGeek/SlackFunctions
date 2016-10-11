@@ -1,3 +1,5 @@
+var Bot = require('slackbots');
+
 module.exports = function(context, req) {
     context.log('Node.js HTTP trigger function processed a request. RequestUri=%s', req.originalUrl);
     
