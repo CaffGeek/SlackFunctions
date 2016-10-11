@@ -7,11 +7,11 @@ module.exports = function(context, req) {
      	context.done();
  	}
     
-    if (req.body && req.body.code)
-        context.log('Code=%s', req.body.code);
+    if (req.query && req.query.code)
+        context.log('Code=%s', req.query.code);
     
-    if (req.body && req.body.code2)
-        context.log('Code2=%s', req.body.code2);
+    if (req.query && req.query.code2)
+        context.log('Code2=%s', req.query.code2);
     
     var Hal9000 = require('./lib/hal9000');
 
