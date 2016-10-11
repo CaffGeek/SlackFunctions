@@ -1,22 +1,22 @@
-#!/usr/bin/env node
+module.exports = function(context, req) {
+    context.log('Hal9000 coming online...');
 
-'use strict';
+    var Hal9000 = require('./lib/hal9000');
 
-context.log('Hal9000 coming online...');
+    var token = process.env.BOT_API_KEY;
+    var name = process.env.BOT_NAME;
 
-var Hal9000 = require('./lib/hal9000');
+    context.log('Token=%s', token);
+    context.log('Name=%s', name);
 
-var token = process.env.BOT_API_KEY;
-var name = process.env.BOT_NAME;
+    context.log('Hal9000 coming online....');
 
-context.log('Token=%s', token);
-context.log('Name=%s', name);
+    var hal9000 = new Hal9000({
+        token: token,
+        name: name
+    });
 
-context.log('Hal9000 coming online....');
-
-var hal9000 = new Hal9000({
-    token: token,
-    name: name
-});
-
-hal9000.run();
+    hal9000.run();
+    
+    context.done();
+};
