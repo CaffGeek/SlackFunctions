@@ -1,7 +1,7 @@
 {
   "bindings": [
     {
-      "webHookType": "slack",
+      "webHookType": "",
       "name": "req",
       "type": "httpTrigger",
       "direction": "in",
