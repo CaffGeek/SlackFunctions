@@ -1,7 +1,7 @@
 'use strict';
 
 var config = require('./config.js');
-var Hal9000 = require('lib/hal9000.js');
+var Hal9000 = require('./lib/hal9000.js');
 
 var hal9000 = new Hal9000(
 {
