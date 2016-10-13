@@ -1,5 +1,5 @@
 module.exports = function(context, req) {
-    context.log('Hal9000 coming online...');
+    context.log('Hal9000 coming online.');
 
     if (req.body && req.body.challenge) {
         context.log('query.body.challenge=%s', req.body.challenge);
